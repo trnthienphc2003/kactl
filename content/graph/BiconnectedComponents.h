@@ -50,4 +50,8 @@ template<class F>
 void bicomps(F f) {
 	num.assign(sz(ed), 0);
 	rep(i,0,sz(ed)) if (!num[i]) dfs(i, -1, f);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 323ba8c (New year new notebook)
