@@ -5,10 +5,15 @@ using namespace std;
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
 typedef long long ll;
+typedef int64_t i64;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 
+#define TASK "test"
 int main() {
 	cin.tie(0)->sync_with_stdio(0);
-	cin.exceptions(cin.failbit);
+	
+	if(fopen("input_"TASK".txt", "r")) {
+		freopen("input_"TASK".txt", "r", stdin);
+	}
 }
