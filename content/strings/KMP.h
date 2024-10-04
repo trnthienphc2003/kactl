@@ -26,3 +26,23 @@ vi match(const string& s, const string& pat) {
 		if (p[i] == sz(pat)) res.push_back(i - 2 * sz(pat));
 	return res;
 }
+
+vector <vi> compute_automaton(string &s) {
+    s += '#';
+    int n = s.size();
+    vi p = pi(s);
+	vector <vi> aut;
+    aut.assign(n, vector<int>(26));
+    rep(i, 0, n) {
+        rep(c, 0, 26) {
+            int j = i;
+            while (j > 0 && 'a' + c != s[j])
+                j = p[j-1];
+            if ('a' + c == s[j])
+                j++;
+            aut[i][c] = j;
+        }
+    }
+	s.pop_back();
+	return aut;
+}

@@ -1,0 +1,2 @@
+- KMP -> Automata
+- Sprague Grundy
